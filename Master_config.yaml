@@ -16,6 +16,7 @@ Tamil:
   size2: 30
   size3: 20
   size5: 15
+  widthreduce: 0
 Hindi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
@@ -40,11 +41,11 @@ Malayalam:
   font2: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
   font3: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
   font5: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
-  size1: 20
-  size2: 30
-  size3: 20
-  size5: 15
-  widthreduce: 5
+  size1: 22
+  size2: 32
+  size3: 22
+  size5: 16
+  widthreduce: 7
 Hindi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
@@ -54,6 +55,7 @@ Hindi:
   size2: 40
   size3: 30
   size5: 20
+  widthreduce: -2
 Bangla:
   font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
   font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
@@ -63,6 +65,7 @@ Bangla:
   size2: 40
   size3: 30
   size5: 20
+  widthreduce: 5
 Gujarati:
   font1: Noto/Gujarati/NotoSansGujarati-Regular.ttf 
   font2: Noto/Gujarati/NotoSansGujarati-Bold.ttf 
@@ -72,6 +75,7 @@ Gujarati:
   size2: 40
   size3: 30
   size5: 20
+  widthreduce: 0
 Punjabi:
   font1: Noto/Punjabi/NotoSansGurmukhi-Regular.ttf 
   font2: Noto/Punjabi/NotoSansGurmukhi-Bold.ttf 
@@ -86,9 +90,9 @@ Telugu:
   font2: Noto/Telugu/NotoSansTelugu-Bold.ttf 
   font3: Noto/Telugu/NotoSansTelugu-Bold.ttf 
   font5: Noto/Telugu/NotoSansTelugu-Bold.ttf 
-  size1: 30
-  size2: 40
-  size3: 30
+  size1: 24
+  size2: 36
+  size3: 26
   size5: 20
 Odia:
   font1: Noto/Odia/NotoSansOriya-Regular.ttf 
@@ -117,6 +121,7 @@ Asamese:
   size2: 40
   size3: 30
   size5: 20
+  widthreduce: 3
 Khasi:
   font1: Noto/English/Montserrat-Regular.ttf 
   font2: Noto/English/Montserrat-Bold.ttf 
@@ -136,6 +141,7 @@ Nepali:
   size2: 40
   size3: 30
   size5: 20
+  widthreduce: -2
 Manipuri:
   font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
   font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
