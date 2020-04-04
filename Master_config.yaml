@@ -45,7 +45,7 @@ Malayalam:
   size2: 32
   size3: 22
   size5: 16
-  widthreduce: 10
+  widthreduce: 6
 Hindi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
