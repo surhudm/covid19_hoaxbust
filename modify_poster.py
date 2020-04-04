@@ -19,14 +19,14 @@ class fill_poster:
         self.image = Image.open(image+".jpg")
         self.fullwidth = self.image.width
 
-    def output_text(self, message, y, font=None, width=None, color='rgb(0, 0, 0)', margin=40, offsety=30):
+    def output_text(self, message, y, font=None, width=None, color='rgb(0, 0, 0)', margin=40, offsety=30, printoffset=False):
 
         for line in textwrap.wrap(message, width):
             w, h = self.draw.textsize(line, font=font)
             self.draw.text(((self.image.width-w)/2, y + offsety), line, font=font, fill=color)
             offsety += font.getsize(line)[1]
 
-    def convert(self, strings, pl, language, fonts, widthreduce):
+    def convert(self, ii, strings, pl, language, fonts, widthreduce):
         self.draw = ImageDraw.Draw(self.image)
 
         self.output_text("The Hoaxbusters", 40, font=fonts["4"],  width=30)
@@ -39,7 +39,7 @@ class fill_poster:
             self.output_text(strings["5"], pl["5"], font=fonts["5"], width=45-widthreduce, color='rgb(0, 0, 0)')
         self.output_text(strings["6"], pl["6"], font=fonts["1"], width=45-widthreduce, color='rgb(94, 94, 94)')
         self.output_text(strings["7"], pl["7"], font=fonts["3"], width=48-widthreduce)
-        self.image.save(self.imagename+"_%s.jpg" % language)
+        self.image.save("Final/"+self.imagename+"_%s.jpg" % language)
 
 if __name__ == "__main__":
 
@@ -101,4 +101,4 @@ if __name__ == "__main__":
         # Initiate a class
         a = fill_poster("Sample_images/%05d" % ii)
         # Fill in the poster with strings, and save file
-        a.convert(strings, pl, language, fonts, widthreduce)
+        a.convert(ii, strings, pl, language, fonts, widthreduce)
