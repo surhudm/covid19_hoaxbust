@@ -12,11 +12,11 @@ Tamil:
   font2: Noto/Tamil/NotoSansTamil-Bold.ttf 
   font3: Noto/Tamil/NotoSansTamil-Bold.ttf 
   font5: Noto/Tamil/NotoSansTamil-Bold.ttf 
-  size1: 20
-  size2: 30
+  size1: 22
+  size2: 28
   size3: 20
-  size5: 15
-  widthreduce: 0
+  size5: 16
+  widthreduce: 5
 Hindi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
@@ -41,11 +41,11 @@ Malayalam:
   font2: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
   font3: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
   font5: Noto/Malayalam/NotoSansMalayalam-Bold.ttf 
-  size1: 22
+  size1: 26
   size2: 32
   size3: 22
   size5: 16
-  widthreduce: 7
+  widthreduce: 10
 Hindi:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
@@ -62,10 +62,9 @@ Bangla:
   font3: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font5: Noto/Bengali/NotoSansBengali-Bold.ttf 
   size1: 30
-  size2: 40
-  size3: 30
+  size2: 35
+  size3: 25
   size5: 20
-  widthreduce: 5
 Gujarati:
   font1: Noto/Gujarati/NotoSansGujarati-Regular.ttf 
   font2: Noto/Gujarati/NotoSansGujarati-Bold.ttf 
@@ -94,34 +93,36 @@ Telugu:
   size2: 36
   size3: 26
   size5: 20
+  widthreduce: 3
 Odia:
   font1: Noto/Odia/NotoSansOriya-Regular.ttf 
   font2: Noto/Odia/NotoSansOriya-Bold.ttf 
   font3: Noto/Odia/NotoSansOriya-Bold.ttf 
   font5: Noto/Odia/NotoSansOriya-Bold.ttf 
   size1: 30
-  size2: 40
-  size3: 30
+  size2: 35
+  size3: 28
   size5: 20
+  widthreduce: 0
 Kannada:
   font1: Noto/Kannada/NotoSansKannada-Regular.ttf 
   font2: Noto/Kannada/NotoSansKannada-Bold.ttf 
   font3: Noto/Kannada/NotoSansKannada-Bold.ttf 
   font5: Noto/Kannada/NotoSansKannada-Bold.ttf 
-  size1: 20
-  size2: 30
-  size3: 20
-  size5: 15
+  size1: 24
+  size2: 32
+  size3: 22
+  size5: 16
 Asamese:
   font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
   font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font3: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font5: Noto/Bengali/NotoSansBengali-Bold.ttf 
-  size1: 30
-  size2: 40
-  size3: 30
+  size1: 25
+  size2: 30
+  size3: 25
   size5: 20
-  widthreduce: 3
+  widthreduce: 2
 Khasi:
   font1: Noto/English/Montserrat-Regular.ttf 
   font2: Noto/English/Montserrat-Bold.ttf 
