@@ -16,7 +16,7 @@ import pandas
 class fill_poster:
     def __init__(self, image):
         self.imagename = image
-        self.image = Image.open(image+".jpg")
+        self.image = Image.open(image+".png.jpg")
         self.fullwidth = self.image.width
 
     def output_text(self, message, y, font=None, width=None, color='rgb(0, 0, 0)', margin=40, offsety=30, printoffset=False):
@@ -32,7 +32,7 @@ class fill_poster:
         self.draw = ImageDraw.Draw(self.image)
 
         # Add a common The Hoaxbusters line
-        self.output_text("The Hoaxbusters", 40, font=fonts["4"],  width=30)
+        self.output_text("The Hoaxbusters", 200, font=fonts["4"],  width=30)
 
         # Add all the strings at the right places with the right fonts
         self.output_text(strings["1"], pl["1"], font=fonts["1"], width=30-widthreduce, color='rgb(94, 94, 94)')
@@ -45,7 +45,7 @@ class fill_poster:
         self.output_text(strings["7"], pl["7"], font=fonts["3"], width=48-widthreduce)
 
         # Save the file
-        self.image.save("Final/"+self.imagename+"_%s.jpg" % language)
+        self.image.save("Final/"+self.imagename+"_%s_hires.jpg" % language)
 
 if __name__ == "__main__":
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     # Read the fonts information
     from yaml import load, Loader
-    fin = open("Master_config.yaml", "r")
+    fin = open("Master_config_hires.yaml", "r")
     config = load(fin, Loader=Loader)
 
     # Setup fonts
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     fonts["2"] = ImageFont.truetype(config[language]["font2"], size=config[language]["size2"])
     fonts["3"] = ImageFont.truetype(config[language]["font3"], size=config[language]["size3"])
     fonts["5"] = ImageFont.truetype(config[language]["font5"], size=config[language]["size5"])
-    fonts["4"] = ImageFont.truetype('Noto/English/Montserrat-Bold.ttf', size=40)
+    fonts["4"] = ImageFont.truetype('Noto/English/Montserrat-Bold.ttf', size=200)
 
     # Some languages required a width reduction in the text compared to default
     widthreduce = 0
@@ -81,13 +81,13 @@ if __name__ == "__main__":
     for ii in range(1, 19):
         strings = {}
         pl = {}
-        pl["1"] = placements[ii-1][1]
-        pl["2"] = placements[ii-1][2]
-        pl["3"] = placements[ii-1][3]
-        pl["4"] = placements[ii-1][4]
-        pl["5"] = placements[ii-1][5]
-        pl["6"] = placements[ii-1][6]
-        pl["7"] = placements[ii-1][7]
+        pl["1"] = placements[ii-1][1]*5
+        pl["2"] = placements[ii-1][2]*5
+        pl["3"] = placements[ii-1][3]*5
+        pl["4"] = placements[ii-1][4]*5
+        pl["5"] = placements[ii-1][5]*5
+        pl["6"] = placements[ii-1][6]*5
+        pl["7"] = placements[ii-1][7]*5 
         strings["1"] = df[language].values[jj]
         jj = jj + 1
         strings["2"] = df[language].values[jj]
