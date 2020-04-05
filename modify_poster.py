@@ -21,16 +21,20 @@ class fill_poster:
 
     def output_text(self, message, y, font=None, width=None, color='rgb(0, 0, 0)', margin=40, offsety=30, printoffset=False):
 
+        # This class will write out the line in the file in multiple lines and center it.
         for line in textwrap.wrap(message, width):
             w, h = self.draw.textsize(line, font=font)
             self.draw.text(((self.image.width-w)/2, y + offsety), line, font=font, fill=color)
             offsety += font.getsize(line)[1]
 
     def convert(self, ii, strings, pl, language, fonts, widthreduce):
+        # Initiate image
         self.draw = ImageDraw.Draw(self.image)
 
+        # Add a common The Hoaxbusters line
         self.output_text("The Hoaxbusters", 40, font=fonts["4"],  width=30)
 
+        # Add all the strings at the right places with the right fonts
         self.output_text(strings["1"], pl["1"], font=fonts["1"], width=30-widthreduce, color='rgb(94, 94, 94)')
         self.output_text(strings["2"], pl["2"], font=fonts["2"], width=30-widthreduce)
         self.output_text(strings["3"], pl["3"], font=fonts["1"], width=40-widthreduce, color='rgb(94, 94, 94)')
@@ -39,6 +43,8 @@ class fill_poster:
             self.output_text(strings["5"], pl["5"], font=fonts["5"], width=45-widthreduce, color='rgb(0, 0, 0)')
         self.output_text(strings["6"], pl["6"], font=fonts["1"], width=45-widthreduce, color='rgb(94, 94, 94)')
         self.output_text(strings["7"], pl["7"], font=fonts["3"], width=48-widthreduce)
+
+        # Save the file
         self.image.save("Final/"+self.imagename+"_%s.jpg" % language)
 
 if __name__ == "__main__":
@@ -48,11 +54,12 @@ if __name__ == "__main__":
     # Read the placements file
     placements = np.loadtxt("%s/placements_%s.txt" % (language, language))
 
+    # Read the fonts information
     from yaml import load, Loader
-
     fin = open("Master_config.yaml", "r")
     config = load(fin, Loader=Loader)
 
+    # Setup fonts
     fonts = {}
     fonts["1"] = ImageFont.truetype(config[language]["font1"], size=config[language]["size1"])
     fonts["2"] = ImageFont.truetype(config[language]["font2"], size=config[language]["size2"])
@@ -60,14 +67,16 @@ if __name__ == "__main__":
     fonts["5"] = ImageFont.truetype(config[language]["font5"], size=config[language]["size5"])
     fonts["4"] = ImageFont.truetype('Noto/English/Montserrat-Bold.ttf', size=40)
 
+    # Some languages required a width reduction in the text compared to default
     widthreduce = 0
     if "widthreduce" in config[language]:
         widthreduce = config[language]["widthreduce"]
 
+    # Read the translations
     df = pandas.read_csv("Hoaxbuster.csv")
     df.fillna("", inplace = True) 
 
-    #for ii in range(1, 19):
+    # Setup translation strings and placements in strings dictionary and pl dictionary
     jj = 0
     for ii in range(1, 19):
         strings = {}
@@ -94,11 +103,13 @@ if __name__ == "__main__":
         strings["7"] = df[language].values[jj]
         jj = jj + 1
         
+        # Some images did not exist in the beginning, so ignore them
         if not path.exists("Sample_images/%05d.jpg" % ii) :
             print("could not find", ii)
             continue
 
         # Initiate a class
         a = fill_poster("Sample_images/%05d" % ii)
+
         # Fill in the poster with strings, and save file
         a.convert(ii, strings, pl, language, fonts, widthreduce)
