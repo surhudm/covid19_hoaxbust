@@ -143,15 +143,26 @@ Nepali:
   size3: 30
   size5: 20
   widthreduce: -2
+Manipuri_meitei:
+  font1: Noto/Manipuri/EyekPro-Regular.ttf 
+  font2: Noto/Manipuri/EyekPro-Regular.ttf
+  font3: Noto/Manipuri/EyekPro-Regular.ttf
+  font5: Noto/Manipuri/EyekPro-Regular.ttf
+  size1: 28
+  size2: 36
+  size3: 28
+  size5: 17
+  widthreduce: 8
 Manipuri:
   font1: Noto/Bengali/NotoSansBengali-Regular.ttf 
   font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font3: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font5: Noto/Bengali/NotoSansBengali-Bold.ttf 
-  size1: 30
-  size2: 40
-  size3: 30
-  size5: 20
+  size1: 28
+  size2: 36
+  size3: 28
+  size5: 17
+  widthreduce: 1
 Konkani:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
