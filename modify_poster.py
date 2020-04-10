@@ -61,10 +61,10 @@ if __name__ == "__main__":
 
     # Setup fonts
     fonts = {}
-    fonts["1"] = ImageFont.truetype(config[language]["font1"], size=config[language]["size1"])
-    fonts["2"] = ImageFont.truetype(config[language]["font2"], size=config[language]["size2"])
-    fonts["3"] = ImageFont.truetype(config[language]["font3"], size=config[language]["size3"])
-    fonts["5"] = ImageFont.truetype(config[language]["font5"], size=config[language]["size5"])
+    fonts["1"] = ImageFont.truetype(config[language]["font1"], size=5*config[language]["size1"])
+    fonts["2"] = ImageFont.truetype(config[language]["font2"], size=5*config[language]["size2"])
+    fonts["3"] = ImageFont.truetype(config[language]["font3"], size=5*config[language]["size3"])
+    fonts["5"] = ImageFont.truetype(config[language]["font5"], size=5*config[language]["size5"])
     fonts["4"] = ImageFont.truetype('Noto/English/Montserrat-Bold.ttf', size=200)
 
     # Some languages required a width reduction in the text compared to default
