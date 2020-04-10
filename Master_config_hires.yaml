@@ -61,10 +61,10 @@ Bangla:
   font2: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font3: Noto/Bengali/NotoSansBengali-Bold.ttf 
   font5: Noto/Bengali/NotoSansBengali-Bold.ttf 
-  size1: 150
-  size2: 175
-  size3: 125
-  size5: 100
+  size1: 30
+  size2: 35
+  size3: 25
+  size5: 20
 Gujarati:
   font1: Noto/Gujarati/NotoSansGujarati-Regular.ttf 
   font2: Noto/Gujarati/NotoSansGujarati-Bold.ttf 
@@ -150,8 +150,18 @@ Manipuri:
   font5: Noto/Bengali/NotoSansBengali-Bold.ttf 
   size1: 30
   size2: 40
-  size3: 30
+  size3: 25
   size5: 20
+Manipuri_meitei:
+  font1: Noto/Manipuri/EyekPro-Regular.ttf
+  font2: Noto/Manipuri/EyekPro-Regular.ttf
+  font3: Noto/Manipuri/EyekPro-Regular.ttf
+  font5: Noto/Manipuri/EyekPro-Regular.ttf
+  size1: 28
+  size2: 36
+  size3: 30
+  size5: 17
+  widthreduce: 8
 Konkani:
   font1: Noto/Devanagari/NotoSansDevanagari-Regular.ttf 
   font2: Noto/Devanagari/NotoSansDevanagari-Bold.ttf 
